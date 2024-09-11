@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuario</title>
+    <link rel="stylesheet" href="./assets/css/crearCurriculum.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="./assets/js/crearCurriculum.js" defer></script> <!-- Enlace al archivo JavaScript -->
+</head>
+<body>
+    
+    <div class="login-container">
+        <h2>Crear CV</h2>
+        <div class="form-group">
+            <label for="habilidades">Habilidades</label>
+            <input type="text" id="habilidades" name="habilidades" required>
+        </div>
+        <div class="form-group">
+            <label for="estudios">Mis estudios</label>
+            <input type="text" id="estudios" name="estudios" required>
+        </div>
+        <div class="form-group">
+            <label for="idiomas">Idiomas</label>
+            <input type="text" id="idiomas" name="idiomas" required>
+        </div>
+        <div class="form-group">
+            <label for="foto">Foto</label>
+            <input type="file" id="foto" name="foto" accept="image/*" required>
+        </div>
+        <button type="button" id="crearCVButton">Crear CV</button>
+        <p>¿No tienes una cuenta? <a href="../pages/registro.html">Regístrate aquí</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="./assets/css/registrarse.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="./assets/img/logos.png" alt="Logo de la marca"></a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="back-arrow-container">
+            <a href="index.html" class="back-arrow">
+                <img src="https://st4.depositphotos.com/1000507/23538/v/450/depositphotos_235388564-stock-illustration-back-clockwise-arrow-icon-simple.jpg" alt="Flecha hacia atrás" height="40px" width="50px" fill="#000000">
+                
+            </a>
+            <h2 style="margin: 0 0 0 10px; padding-left: 13%;">Formulario de Registro</h2>
+        </div>
+        <div class="signup-container">
+            <form id="signup-form">
+                <h2>Crear Cuenta</h2>
+                
+                <div class="form-group">
+                    <label for="role">Registrarse como:</label>
+                    <select id="role" name="role" required>
+                        <option value="empresa">Empresa</option>
+                        <option value="desempleado">Desempleado</option>
+                    </select>
+                </div>
+            
+                <div class="form-group" id="nombreEmpresaGroup">
+                    <label for="nombre_empresa">Nombre de la empresa:</label>
+                    <input type="text" id="nombre_empresa" name="nombre_empresa" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+            
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/register.js"></script>
+    <script>
+         document.getElementById('role').addEventListener('change', function() {
+    const role = this.value;
+    const nombreEmpresaGroup = document.getElementById('nombreEmpresaGroup');
+
+    if (role === 'empresa') {
+        nombreEmpresaGroup.style.display = 'block';
+        document.getElementById('nombre_empresa').setAttribute('required', 'required');
+    } else {
+        nombreEmpresaGroup.style.display = 'none';
+        document.getElementById('nombre_empresa').removeAttribute('required');
+    }
+});
+    </script>
+</body>
+
+</html>

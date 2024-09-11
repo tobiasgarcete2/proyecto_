@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="assets/css/stylesini.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="./assets/img/logos.png" alt="Logo de la marca">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="adopcion.html">Busca Mascota</a></li>
+        
+            </ul>
+        </nav>
+        <div class="btn-container" id="navv">
+            <span id="username" style="display: none;"></span>
+        </div>
+    </header>
+    <main>
+        <div class="login-container">
+            <div class="back-arrow-container">
+                <a href="index.html" class="back-arrow">
+                    <img src="https://st4.depositphotos.com/1000507/23538/v/450/depositphotos_235388564-stock-illustration-back-clockwise-arrow-icon-simple.jpg" alt="Flecha hacia atrás" height="30px" width="40px" fill="#000000">
+
+                </a>
+                <h2 style="margin: 0 0 0 10px; padding-left: 9%;" >Iniciar Sesión</h2>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Correo Electrónico</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <a href="../index.html"><button type="submit" id="signup-form">Ingresar</button></a>
+                <p>¿No tienes una cuenta? <a href="./registrarse.html">Regístrate aquí</a></p>
+            </form>
+        </div>
+    </main>
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
